@@ -10,8 +10,12 @@ import java.math.BigDecimal;
 @SpringBootTest
 class ActivityApplicationTests {
 
-    @Autowired
     ActivityListener listener;
+
+    @Autowired
+    public void setListener(ActivityListener listener) {
+        this.listener = listener;
+    }
 
     @Test
     void contextLoads() {

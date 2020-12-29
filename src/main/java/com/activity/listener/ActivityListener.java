@@ -1,11 +1,8 @@
 package com.activity.listener;
 
-import org.springframework.stereotype.Component;
-
 import java.math.BigDecimal;
 import java.util.Calendar;
 
-@Component
 public interface ActivityListener {
 
     boolean onEventA(long customerId);

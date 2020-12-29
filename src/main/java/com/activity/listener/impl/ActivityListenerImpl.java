@@ -13,11 +13,19 @@ import java.util.List;
 @Component
 public class ActivityListenerImpl implements ActivityListener {
 
-    @Autowired
     private List<RegisterListener> registerListeners;
 
-    @Autowired
     private List<TransListener> transListeners;
+
+    @Autowired
+    public void setRegisterListeners(List<RegisterListener> registerListeners) {
+        this.registerListeners = registerListeners;
+    }
+
+    @Autowired
+    public void setTransListeners(List<TransListener> transListeners) {
+        this.transListeners = transListeners;
+    }
 
     @Override
     public boolean onEventA(long customerId) {
