@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.math.BigDecimal;
+
 @SpringBootTest
 class ActivityApplicationTests {
 
@@ -18,6 +20,11 @@ class ActivityApplicationTests {
     @Test
     public void testMultiHandler() {
         listener.onEventA(1L);
+    }
+
+    @Test
+    public void testTransListener() {
+        listener.onEventB(2L, BigDecimal.ONE);
     }
 
 }

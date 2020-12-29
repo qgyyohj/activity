@@ -1,5 +1,7 @@
 package com.activity.listener;
 
 public interface BaseListener {
-    boolean handle(long customerId);
+    default boolean handle(long customerId){
+        return true;
+    }
 }
