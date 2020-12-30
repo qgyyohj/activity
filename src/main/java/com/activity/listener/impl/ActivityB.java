@@ -16,13 +16,13 @@ public class ActivityB implements RegisterListener, TransListener {
     private final Logger logger = LoggerFactory.getLogger("activity-b");
 
     @Override
-    public boolean handle(long customerId) {
+    public boolean register(long customerId) {
         logger.info("活动b处理注册, id:{}", customerId);
         return false;
     }
 
     @Override
-    public boolean handle(long id, BigDecimal amount) {
+    public boolean trans(long id, BigDecimal amount) {
         logger.info("活动b处理交易, id:{}, amount:{}", id, amount);
         return false;
     }

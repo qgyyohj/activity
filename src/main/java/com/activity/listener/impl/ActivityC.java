@@ -15,7 +15,7 @@ public class ActivityC implements TransListener {
     private final Logger logger = LoggerFactory.getLogger("activity-c");
 
     @Override
-    public boolean handle(long id, BigDecimal amount) {
+    public boolean trans(long id, BigDecimal amount) {
         logger.info("活动c处理交易, id:{}, amount:{}", id, amount);
         return false;
     }

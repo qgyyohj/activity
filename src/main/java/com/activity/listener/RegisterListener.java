@@ -1,4 +1,5 @@
 package com.activity.listener;
 
-public interface RegisterListener extends BaseListener{
+public interface RegisterListener {
+    boolean register(long customerId);
 }

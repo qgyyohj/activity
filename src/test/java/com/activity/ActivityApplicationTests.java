@@ -23,12 +23,12 @@ class ActivityApplicationTests {
 
     @Test
     public void testMultiHandler() {
-        listener.onEventA(1L);
+        listener.register(1L);
     }
 
     @Test
     public void testTransListener() {
-        listener.onEventB(2L, BigDecimal.ONE);
+        listener.trans(2L, BigDecimal.ONE);
     }
 
 }

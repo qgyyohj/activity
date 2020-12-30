@@ -28,19 +28,14 @@ public class ActivityListenerImpl implements ActivityListener {
     }
 
     @Override
-    public boolean onEventA(long customerId) {
-        registerListeners.forEach(listener -> listener.handle(customerId));
+    public boolean register(long customerId) {
+        registerListeners.forEach(listener -> listener.register(customerId));
         return true;
     }
 
     @Override
-    public boolean onEventB(long customerId, BigDecimal amount) {
-        transListeners.forEach(listener -> listener.handle(customerId, amount));
+    public boolean trans(long id, BigDecimal amount) {
+        transListeners.forEach(listener -> listener.trans(id, amount));
         return true;
-    }
-
-    @Override
-    public boolean onEventC(long customerId, BigDecimal amount, Calendar calendar) {
-        return false;
     }
 }
