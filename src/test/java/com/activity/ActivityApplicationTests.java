@@ -23,7 +23,7 @@ class ActivityApplicationTests {
 
     @Test
     public void testMultiHandler() {
-        listener.register(1L);
+        listener.register(1L, 2L);
     }
 
     @Test

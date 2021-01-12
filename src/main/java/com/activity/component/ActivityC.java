@@ -1,4 +1,4 @@
-package com.activity.listener.impl;
+package com.activity.component;
 
 import com.activity.listener.TransListener;
 import org.slf4j.Logger;

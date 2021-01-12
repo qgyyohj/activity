@@ -1,4 +1,4 @@
-package com.activity.listener.impl;
+package com.activity.component;
 
 import com.activity.listener.RegisterListener;
 import com.activity.listener.TransListener;
@@ -16,7 +16,7 @@ public class ActivityB implements RegisterListener, TransListener {
     private final Logger logger = LoggerFactory.getLogger("activity-b");
 
     @Override
-    public boolean register(long customerId) {
+    public boolean register(long customerId, long inviterId) {
         logger.info("活动b处理注册, id:{}", customerId);
         return false;
     }

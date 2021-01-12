@@ -1,4 +1,4 @@
-package com.activity.listener.impl;
+package com.activity.component;
 
 import com.activity.listener.RegisterListener;
 import org.slf4j.Logger;
@@ -13,7 +13,7 @@ public class ActivityA implements RegisterListener {
     private final Logger logger = LoggerFactory.getLogger("activity-a");
 
     @Override
-    public boolean register(long customerId) {
+    public boolean register(long customerId, long inviterId) {
         logger.info("活动a处理注册");
         return false;
     }

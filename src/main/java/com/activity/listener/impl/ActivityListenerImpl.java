@@ -27,8 +27,8 @@ public class ActivityListenerImpl implements ActivityListener {
     }
 
     @Override
-    public boolean register(long customerId) {
-        registerListeners.forEach(listener -> listener.register(customerId));
+    public boolean register(long customerId, long inviterId) {
+        registerListeners.forEach(listener -> listener.register(customerId, inviterId));
         return true;
     }
 
